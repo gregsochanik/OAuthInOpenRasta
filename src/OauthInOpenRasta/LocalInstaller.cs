@@ -12,7 +12,7 @@ namespace OauthInOpenRasta
 			var descriptor = AllTypes
 				.FromAssembly(typeof(LocalInstaller).Assembly)
 				.Pick()
-				//.Unless(x => x.IsSubclassOf(typeof(OperationInterceptor)))
+				.Unless(x => x.IsSubclassOf(typeof(OperationInterceptor)))
 				.WithService.FirstInterface()
 				.Configure(c => c.LifeStyle.Transient);
 
